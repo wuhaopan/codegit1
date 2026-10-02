@@ -4,7 +4,7 @@
         {
             "label": "gcc 编译",
             "type": "shell",
-            "command": "C:\\w64devkit\\bin\\gcc.exe",
+            "command": "G:\\w64devkit\\bin\\gcc.exe",
             "args": [
                 "-g",
                 "-Wall",
@@ -17,7 +17,7 @@
             ],
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "problemMatcher": [
                 "$gcc"
@@ -43,7 +43,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: gcc.exe 生成活动文件",
-            "command": "C:/w64devkit/bin/gcc.exe",
+            "command": "G:/w64devkit/bin/gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -51,19 +51,20 @@
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-Wall",
-                "-Wextra"
+                "-Wextra",
+                "-static"
             ],
             "options": {
-                "cwd": "C:/w64devkit/bin"
+                "cwd": "G:/w64devkit/bin"
             },
             "problemMatcher": [
                 "$gcc"
             ],
             "group": {
                 "kind": "build",
-                "isDefault": true
+                "isDefault": false
             },
-            "detail": "调试器生成的任务。"
+            "detail": "C/C++ 扩展自动生成的任务"
         }
     ]
 }

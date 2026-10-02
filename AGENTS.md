@@ -10,9 +10,12 @@
 1. **只提交插件目录本身**（例如 `dsh-webchart/`），不要把临时抓取的数据、测试产物、
    生成的图表等一起提交（那些文件保留在工作区但不入库）。
 2. 提交信息用：`feat(<插件名>): <做了什么>` 或 `fix(<插件名>): <修了什么>`。
-3. 提交后执行 `git push` 推送到远程。GitHub 直连会被重置（`Recv failure: Connection was reset`），
-   若推送失败先确认代理已配置：`git config --global http.proxy http://127.0.0.1:7993`
-   （代理软件重启后端口通常仍是 7993；系统代理开关与 git 配置是两回事）。
+3. 提交后执行 `git push` 推送到远程。这台机器的网络会来回变，推送失败时按报错对症处理：
+   - `Failed to connect ... over proxy 127.0.0.1` → **代理软件没开**，走直连：
+     `git config --global --unset http.proxy` + `git config --global --unset https.proxy`
+   - `Recv failure: Connection was reset` → **直连被墙**，配代理：
+     `git config --global http.proxy http://127.0.0.1:7993`
+   两种配置互斥，改完直接重试 push；本地 commit 不会丢，稍后补推也行。
 4. 提交前确认三件事：源码已同步到 DSH profile、DSH 页面已刷新、功能已实测通过。
 
 ## DSH 插件开发要点

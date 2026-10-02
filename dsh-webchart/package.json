@@ -1,0 +1,31 @@
+{
+  "name": "dsh-webchart",
+  "version": "0.1.0",
+  "description": "网页总结出图：在 Harness 输入框旁加「网址 + 生成」按钮，一键抓取网页、总结并生成交互式 HTML 图表",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": {
+      "default": "./lib/index.mjs"
+    },
+    "./client": {
+      "default": "./lib/client.cjs"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

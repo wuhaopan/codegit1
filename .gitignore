@@ -1,0 +1,23 @@
+# 构建产物
+*.exe
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.pdb
+build/
+out/
+dist/
+# 依赖
+node_modules/
+# 编辑器/系统
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+# 临时
+*.tmp
+*.log
+_probe_out/

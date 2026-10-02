@@ -1,5 +1,8 @@
 # DeepSeekworks — 工作区约定
 
+> 📖 完整的 DSH 插件 API 参考见 [docs/plugin-api.md](docs/plugin-api.md)
+> （插槽清单、inputActions、调试方法、陷阱表；本文件只保留速查与规则）
+
 ## 插件生产规则（必须遵守）
 
 **每次插件开发或修改结束时，必须提交到 git。** 具体：

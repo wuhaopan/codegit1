@@ -12,7 +12,10 @@ dist/
 # 依赖
 node_modules/
 # 编辑器/系统
-.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/c_cpp_properties.json
 .idea/
 *.swp
 Thumbs.db

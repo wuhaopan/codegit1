@@ -1,6 +1,6 @@
 {
   "name": "dsh-webchart",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "网页总结出图：在 Harness 输入框旁加「网址 + 生成」按钮，一键抓取网页、总结并生成交互式 HTML 图表",
   "type": "module",
   "main": "lib/index.mjs",
@@ -27,5 +27,10 @@
         "@deepseek-ai/dsh-client-ui-conversation"
       ]
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuhaopan/codegit1.git",
+    "directory": "dsh-webchart"
   }
 }
